@@ -1,0 +1,139 @@
+body {
+    background: linear-gradient(to bottom, #87CEEB, #f9f9f9); /* Sky blue gradient */
+    color: #333; /* Dark gray text color */
+    font-family: 'Roboto', sans-serif; /* Default font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    animation: colorChange 10s infinite alternate; /* Apply animation to change colors */
+  }
+  
+  @keyframes colorChange {
+    0% {
+      background: linear-gradient(to bottom, #87CEEB, #f9f9f9); /* Sky blue gradient */
+      color: #333; /* Dark gray text */
+    }
+    25% {
+      background: linear-gradient(to bottom, #ff69b4, #f9f9f9); /* Hot pink gradient */
+      color: #fff; /* White text */
+    }
+    50% {
+      background: linear-gradient(to bottom, #00ffff, #f9f9f9); /* Cyan gradient */
+      color: #333; /* Dark gray text */
+    }
+    75% {
+      background: linear-gradient(to bottom, #ffff00, #f9f9f9); /* Yellow gradient */
+      color: #333; /* Dark gray text */
+    }
+    100% {
+      background: linear-gradient(to bottom, #ff1493, #f9f9f9); /* Deep pink gradient */
+      color: #fff; /* White text */
+    }
+  }
+  
+  .card {
+    max-width: 400px;
+    border: white 1px solid;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #008080, #004d4d); /* Deep teal gradient */
+    color: #ffffff; /* White text */
+    transition: transform 0.3s ease-in-out;
+    position: relative; /* Add position relative for absolute positioned pseudo-elements */
+    overflow: hidden; /* Hide overflowing border animation */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card:before,
+  .card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ffd700, #ff69b4, #00ffff, #ffff00); /* Gradient colors for border */
+    z-index: -1; /* Behind the content */
+    animation: borderAnimation 4s infinite linear; /* Animation for the border */
+    border-radius: 15px; /* Ensure same border radius as the card */
+  }
+  
+  @keyframes borderAnimation {
+    0% {
+      transform: translateX(-150%);
+    }
+    100% {
+      transform: translateX(150%);
+    }
+  }
+  
+  .card-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif; /* Example of different font */
+  }
+  
+  .timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5rem;
+    font-weight: bold;
+  }
+  
+  .time {
+    margin: 0 5px;
+    animation: fire 0.2s infinite alternate;
+  }
+  
+  @keyframes fire {
+    0% {
+      text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700, 0 0 50px #ffd700, 0 0 60px #ffd700, 0 0 70px #ffd700;
+    }
+    100% {
+      text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700, 0 0 50px #ffd700, 0 0 60px #ffd700, 0 0 70px #ffd700, 0 0 80px #ffd700;
+    }
+  }
+  
+  .buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-primary,
+  .btn-secondary,
+  .btn-danger {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .btn-danger:hover {
+    background-color: #ffd700; /* Gold button on hover */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    margin-right: 5px;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2);
+  }
+  

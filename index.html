@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Timer</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card mt-5">
+      <div class="card-body">
+        <h5 class="card-title"><i class="fas fa-hourglass-half"></i> Smart Timer</h5>
+        <div class="timer">
+          <div class="time" id="hours">00</div>
+          <div class="time">:</div>
+          <div class="time" id="minutes">00</div>
+          <div class="time">:</div>
+          <div class="time" id="seconds">00</div>
+        </div>
+        <div class="buttons mt-3">
+          <button class="btn btn-primary" id="startButton" onclick="startTimer()">Start</button>
+          <button class="btn btn-secondary hidden" id="stopButton" onclick="stopTimer()">Pause</button>
+          <button class="btn btn-danger hidden" id="resetButton" onclick="resetTimer()">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
